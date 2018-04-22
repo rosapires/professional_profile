@@ -1,0 +1,531 @@
+/*DESKTOP VERSION*/
+
+
+html,
+body {
+    height: 100%;
+}
+
+html,
+body,
+input,
+textarea,
+buttons {
+    /*     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+
+
+#content-wrapper {
+    min-height: 100%;
+    /* sticky footer */
+    box-sizing: border-box;
+}
+
+
+
+.skin {
+    width: 70%;
+    height: auto;
+    align-self: center;
+}
+
+#dash {
+    color: deeppink;
+}
+
+.scroll-link {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+/* .scroll {
+    animation-name: scroll;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.650, -0.550, 0.250, 1.500);
+    animation-iteration-count: infinite;
+    transform-origin: 50% 20.5px;
+    will-change: transform;
+} */
+
+.myheader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: auto;
+    background-color: white;
+    align-self: center;
+    height: 13vh;
+}
+
+
+.myheader ul{
+    margin-bottom: 0;
+}
+
+.myheader a {
+    color: black;
+}
+
+.myheader table {
+    width: 100%;
+}
+
+.mylogo{
+
+    align-self:center;
+    padding-top: 3px;
+
+
+}
+.newlogo {
+    width: 20%;
+    padding-left: 12em;
+    position: absolute;
+
+}
+
+.mymenu{
+   margin-top: 4em;
+   padding-left: 20em;
+    grid-column: 2/-1;
+
+
+}
+
+#menu {
+
+    align-self: center;
+    font-size: 16px;
+    grid-column: 1/3;
+
+}
+
+#menu li{
+    display: inline;
+    padding: 10px;
+
+}
+
+#menu a:hover{
+    text-decoration: none;
+}
+
+#profile{
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    width: auto;
+    height: 100vh;
+
+}
+
+.mycar {
+    width: 59%;
+    height: auto;
+    align-self: center;
+    padding-left: 23em;
+}
+
+.myscroll{
+    grid-column: 2/3;
+}
+
+.mouse {
+    max-width: 2.5rem;
+    width: 100%;
+    height: auto;
+    padding-left: 18em;
+}
+
+
+
+.profile {
+    width: 120%;
+    height: auto;
+    align-self: center;
+    padding-left: 14em;
+}
+
+#animation {
+
+ padding-top: 150px;
+}
+
+.about4{
+    padding-top: 100px;
+}
+
+#phone a:hover {
+    opacity: 0.5;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+#linkedin a:hover {
+    opacity: 0.5;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+#mail a:hover {
+    opacity: 0.5;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+
+/*modal box*/
+
+text{
+    color: black;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+#modal {
+    text-align: center;
+    position: fixed;
+    padding-top: 2em;
+    z-index: 10;
+    width: 50vw;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.modal-content {
+    background-color: grey;
+    padding: 1em;
+    width: 80%;
+    margin: auto;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#background{
+    background-color: darkseagreen;
+    width: auto;
+    height: 250vh;
+    display: grid;
+    align-self: center;
+    margin:0;
+    grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+}
+
+#mycompetences{
+    grid-column: 2/4;
+    grid-row:1/2;
+    align-self: flex-end;
+    margin: 0;
+    position: relative;
+}
+
+#mytimeline{
+    grid-column: 2/4;
+    grid-row:2/3;
+    margin: 0;
+    align-self: flex-start;
+
+}
+
+
+#job1 a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#edu1 a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.myrole {
+    display: none;
+}
+
+#carjob1{
+    display: none;
+
+}
+
+#caredu1{
+    display: none;
+}
+
+
+
+/**
+ * Footer CSS
+ */
+
+footer {
+    box-sizing: border-box;
+    height: 100px;
+    background-color: #eee;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 35px;
+}
+
+
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+/* .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+} */
+
+.carposition{
+    background-color: black;
+    width: 30%;
+    height: auto;
+    margin-left: 50%;
+    margin-bottom: 300%;
+    position: absolute;
+}
+
+.smallcar{
+    width: 20%;
+    height: auto;
+}
+
+/* Add animation (fade in the popup) */
+/*
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+} */
+
+
+
+
+
+/*
+
+scrollmagic test */
+.active{
+    background: pink;
+}
+
+
+/*PORTFOLIO SECTION*/
+#portfolio{
+    height: 130vh;
+    width:auto;
+    background-color: lightblue;
+    align-items: center;
+}
+
+
+.gallery-title
+{
+    font-size: 36px;
+    color: #42B32F;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #42B32F;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #42B32F;
+}
+
+.btn-default:active .filter-button:active
+{
+    background-color: #42B32F;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+
+.img-responsive{
+    width: 70%;
+    height: auto;
+        padding: 2em;
+    align-self: center;
+}
+
+
+.row{
+    align-content: center;
+}
+
+#allimages{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-left: 10em;
+    margin-right: 10em;
+
+}
+
+#allimages a:hover{
+    opacity: 0.5;
+}
+
+#contacts{
+    height: 50vh;
+    width:auto;
+    background-color: darkseagreen;
+}
+
+/*PORTFOLIO IMAGES: ON HOVER, PULSE*/
+/* #allimages {
+  list-style: none;
+  margin-right: 50px;
+  text-align: center;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+} */
+
+/* >>>STARS HERE */
+/* @import "compass/css3";
+
+
+
+.button {
+  position: relative;
+  font-family: futura, helvetica, sans;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #C56089;
+  display: inline-block;
+  line-height: 120px;
+  width: 120px; height: 120px;
+  border-radius:50%;
+  text-decoration: none;
+  color: #fff;
+transition:all 275ms cubic-bezier(0.53, -0.67, 0.73, 0.74);
+  }
+  hover {
+      background-color: #cc3177;
+    transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65));
+     }
+    .pulse {
+        opacity: 1;
+        border: 1px solid #cc3177;
+ transform: scale(1.15);
+   transition-timing-function:cubic-bezier(0.37, 0.74, 0.15, 1.65);
+      }
+    }
+}
+
+.pulse {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: none;
+    border: 1px solid #C56089;
+    border-radius: 50%;
+    transition: all .3s cubic-bezier(0.53, -0.67, 0.79, 0.74);
+}
+
+ */
+/*MOBILE VERSION*/
+
+
+/*  DROPDOWN MENU https://www.muicss.com/docs/v1/css-js/dropdowns */
+
+
+
